@@ -1,0 +1,313 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --accent-color: #4a4a4a;
+    --text-color: #000000;
+    --bg-color: #ffffff;
+    --light-gray: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.9;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+.logo {
+    width: 140px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+            nav ul li a:hover {
+                color: var(--accent-color);
+            }
+
+/* Sections */
+section {
+    padding: 80px 0;
+    scroll-margin-top: 70px;
+}
+
+    section:nth-child(even) {
+        background-color: var(--light-gray);
+    }
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 70px; /* Adjust based on your navbar height */
+}
+/* Header */
+#header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.header-text {
+    max-width: 800px;
+}
+
+    .header-text h1 {
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+
+    .header-text p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+    .btn:hover {
+        background-color: var(--accent-color);
+    }
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 200;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        height: 150px;
+    }
+
+/* Social Media */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+    .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 24px;
+        color: var(--primary-color);
+        transition: color 0.3s ease;
+    }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+/* Footer */
+footer {
+    background-color: var(--light-gray);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+.project-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Education Section */
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.education-item {
+    flex-basis: calc(50% - 10px);
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: flex-start;
+}
+
+.school-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.education-details {
+    flex: 1;
+}
+
+    .education-details h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .education-details p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+@media (max-width: 768px) {
+    .education-item {
+        flex-basis: 100%;
+    }
+}
