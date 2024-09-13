@@ -77,7 +77,7 @@ nav ul {
 
 /* Sections */
 section {
-    padding: 80px 0;
+    padding: 60px 0;
     scroll-margin-top: 70px;
 }
 
@@ -86,18 +86,20 @@ section {
     }
 
 .section-title {
-    font-size: 36px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 30px;
     text-align: center;
 }
+
 #home {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 70px; /* Adjust based on your navbar height */
+    padding-top: 70px;
 }
+
 /* Header */
 #header {
     height: 100vh;
@@ -113,12 +115,12 @@ section {
 }
 
     .header-text h1 {
-        font-size: 80px;
+        font-size: 48px;
         margin-bottom: 20px;
     }
 
     .header-text p {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 30px;
     }
 
@@ -140,7 +142,7 @@ section {
 
 /* Contact Form */
 .contact-form {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -193,34 +195,6 @@ footer {
     text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav .container {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-        nav ul li {
-            margin: 10px 0;
-        }
-
-    .header-text h1 {
-        font-size: 36px;
-    }
-
-    .header-text p {
-        font-size: 18px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-}
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -262,11 +236,7 @@ footer {
     font-size: 14px;
     padding: 8px 16px;
 }
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 /* Education Section */
 .education-container {
     display: flex;
@@ -306,8 +276,69 @@ footer {
         margin-bottom: 5px;
     }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
     .education-item {
         flex-basis: 100%;
+    }
+
+    .education-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .school-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .contact-form {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .header-text p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
