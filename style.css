@@ -142,7 +142,7 @@ section {
 
 /* Contact Form */
 .contact-form {
-    max-width: 100%;
+    max-width: 600%;
     margin: 0 auto;
 }
 
@@ -153,27 +153,36 @@ section {
     .form-group label {
         display: block;
         margin-bottom: 5px;
-        font-weight: 200;
     }
-
     .form-group input,
     .form-group textarea {
         width: 100%;
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        font-size: 16px;
     }
-
     .form-group textarea {
         height: 150px;
     }
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
 /* Social Media */
 .social-links {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
     .social-links a {
